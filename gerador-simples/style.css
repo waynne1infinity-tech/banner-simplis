@@ -1,0 +1,141 @@
+/* WAYNNE AI — Gerador de Banners | WADS-SPEC v1.7.0 */
+:root {
+  --azul: #2E68FF;
+  --roxo: #783FE4;
+  --ciano: #00D8FF;
+  --fundo: #0A0B10;
+  --escuro: #12141C;
+  --texto-claro: #F2F2F4;
+  --texto-secundario: #8F91A6;
+  --borda: #1E2030;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background: var(--fundo);
+  color: var(--texto-claro);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--borda);
+}
+
+.page-header h1 {
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, var(--azul), var(--roxo), var(--ciano));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-header p {
+  color: var(--texto-secundario);
+  margin-top: 8px;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.form-section, .preview-section {
+  background: var(--escuro);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--borda);
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: var(--ciano);
+}
+
+label {
+  display: block;
+  margin: 14px 0 6px;
+  font-size: 0.9rem;
+  color: var(--texto-secundario);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  color: var(--texto-claro);
+  font-size: 0.95rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--azul);
+  box-shadow: 0 0 0 2px rgba(46, 104, 255, 0.2);
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 24px;
+  background: linear-gradient(90deg, var(--azul), var(--roxo));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(46, 104, 255, 0.3);
+}
+
+#bannerContainer {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.banner-placeholder {
+  color: var(--texto-secundario);
+  text-align: center;
+  padding: 20px;
+}
+
+#baixarBtn {
+  background: linear-gradient(90deg, var(--ciano), var(--azul));
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
